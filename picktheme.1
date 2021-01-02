@@ -1,0 +1,12 @@
+.\" Manpage for picktheme.
+
+.TH picktheme 1 "02 Jan 2021" "1.0" "picktheme man page"
+
+.SH NAME
+picktheme \- set a desktop theme from a wallpaper directory
+
+.SH SYNOPSIS
+picktheme
+
+.SH DESCRIPTION
+picktheme opens a Rofi menu displaying wallpapers found in $WALLPAPER_DIR. When a wallpaper is selected, it will be set as background using feh, and a colorscheme will be applied using pywal. If $WALLPAPER_DIR is not defined, the default directory is $HOME/.config/wallpapers.
