@@ -1,0 +1,16 @@
+#!/bin/sh
+
+wallpaper_dir=${WALLPAPER_DIR:-"$HOME/.config/wallpapers"}
+
+# Show list of configr-registered configs
+chosen="$(ls "$wallpaper_dir" | rofi -dmenu -p 'Pick a theme')"
+
+# Exit if nothing was selected
+[ -z "$chosen" ] && exit 0
+
+# Set wallpaper to chosen image
+feh --bg-fill "${wallpaper_dir}/${chosen}"
+
+# Set color scheme based on image
+wal -i "${wallpaper_dir}/${chosen}"
+
